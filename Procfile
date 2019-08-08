@@ -1,1 +1,1 @@
-web: python onyourterms/manage.py runserver
+web: cd onyourterms && gunicorn onyourterms.wsgi
