@@ -9,9 +9,9 @@ def sample_info():
 				"snippet": "...Your location information We collect information about your location when you use our services, which helps us offer..."
 			},
 			{
-				"title": "This service may collect, use, and share location data Discussion Generated through the annotate view",
-				"category": "privacy",
-				"snippet": "...Your location information We collect information about your location when you use our services, which helps us offer..."
+				"title": "There is a big fee",
+				"category": "fee",
+				"snippet": "...If you use our service, you must pay a $1000 fee..."
 			}
 			]
 	}

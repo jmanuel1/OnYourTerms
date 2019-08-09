@@ -20,5 +20,5 @@ from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('api/', views.index, name = "api"),
+	path('api/', views.fetch_info, name = "api"),
 ]

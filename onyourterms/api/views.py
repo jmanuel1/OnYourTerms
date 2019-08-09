@@ -6,11 +6,12 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 @csrf_exempt
-def index(request):
-	print(request.method)
+def fetch_info(request):
 	if request.method == "POST":
-		print(request.body)
-	
+		split_list = (request.body).decode("utf-8").split("\n")
+		url = split_list[len(split_list) - 3].replace("\n", "")
+		
+
 	context = parse_script.sample_info()
 	
-	return JsonResponse(context); 
+	return JsonResponse(context)
