@@ -24,8 +24,8 @@ def fetch_info(request):
 		print(url)
 		
 	context = {
-		#"data": parse_script.parse_url(url) 
-		"data": parse_script.sample_info() 
+		"data": parse_script.parse_url(url) 
+		#"data": parse_script.sample_info() 
 	}
 	
 	print(context)

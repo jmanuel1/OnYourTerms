@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 
 def parse_url(before_url):
-	bad_tags = ["fees"]
+	bad_tags = ["fees", "privacy", "penalty", "charge", "rights"]
 	
 	privacy_tags = ["privacy"]	
 	
