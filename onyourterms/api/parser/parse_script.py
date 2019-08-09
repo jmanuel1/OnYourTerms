@@ -31,8 +31,8 @@ def parse_url(before_url):
 	
 	for url in bad_urls:
 		context_list.append({
-			"title": "Fee Notice",
-			"category": "fee",
+			"title": "Notice",
+			"category": "Notice",
 			"snippet": url
 		})
 	
