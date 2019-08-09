@@ -1,5 +1,7 @@
+from bs4 import BeautifulSoup
+import urllib.request as urllib2
+
 def parse_url(before_url):
-	'''
 	bad_tags = ["fees"]
 	
 	privacy_tags = ["privacy"]	
@@ -26,8 +28,6 @@ def parse_url(before_url):
 		})
 	
 	return context_list
-	'''
-	return []
 
 def sample_info():
 	context = {
