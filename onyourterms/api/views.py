@@ -12,13 +12,26 @@ def fetch_info(request):
 		split_list = (request.body).decode("utf-8").split("\n")
 		#print(split_list[0])
 		
-		#url = split_list[len(split_list) - 3].replace("\n", "")
-		url = split_list[0]
-		#print(url[1:len(url) - 1])
+		print("SPLIT LIST: ")
+		print(str(split_list[0].replace('"', "")))
+		
+		url = str(split_list[0].replace('"', ""))
+		#url = url
+		
+		#print(type(url))
+		#print(url)
+		#print(split_list)
+		print(url)
 		
 	context = {
-		"data": parse_script.parse_url(url) 
+		#"data": parse_script.parse_url(url) 
+		"data": parse_script.sample_info() 
 	}
+	
+	[
+		{thing1},
+		{thing2}
+	]
 	
 	print(context)
 	
