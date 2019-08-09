@@ -1,6 +1,34 @@
-def parse_pdf():
-	return True
+def parse_url(before_url):
+	'''
+	bad_tags = ["fees"]
 	
+	privacy_tags = ["privacy"]	
+	
+	url = before_url
+	
+	page = urllib2.urlopen(url)
+	soup = BeautifulSoup(page, features="html.parser")
+	
+	bad_urls = []
+	
+	for line in soup.get_text().split("."):
+		for tag in bad_tags:
+			if tag.strip() in line.strip() and "[" not in line and "{" not in line and "/" not in line and line.strip() not in bad_urls:
+				bad_urls.append(line.strip())
+	
+	context_list = []
+	
+	for url in bad_urls:
+		context_list.append({
+			"title": "Fee Notice",
+			"category": "fee",
+			"snippet": url
+		})
+	
+	return context_list
+	'''
+	return []
+
 def sample_info():
 	context = {
 		"data": [{

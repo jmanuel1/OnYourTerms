@@ -11,7 +11,13 @@ def fetch_info(request):
 		split_list = (request.body).decode("utf-8").split("\n")
 		url = split_list[len(split_list) - 3].replace("\n", "")
 		
-
+	url = "https://www.jetblue.com/legal/flights-terms"
 	context = parse_script.sample_info()
 	
-	return JsonResponse(context)
+	response = JsonResponse(context)
+	response['Access-Control-Allow-Origin'] = '*'
+	response["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+	response["Access-Control-Max-Age"] = "1000"
+	response["Access-Control-Allow-Headers"] = "X-Requested-With, Content-Type"
+	
+	return response
