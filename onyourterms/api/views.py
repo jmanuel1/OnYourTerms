@@ -28,11 +28,6 @@ def fetch_info(request):
 		"data": parse_script.sample_info() 
 	}
 	
-	[
-		{thing1},
-		{thing2}
-	]
-	
 	print(context)
 	
 	response = JsonResponse(context)
