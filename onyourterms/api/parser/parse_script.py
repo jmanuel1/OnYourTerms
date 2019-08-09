@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import urllib.request as urllib2
+from urllib.request import Request, urlopen
 
 def parse_url(before_url):
 	bad_tags = ["fees"]
@@ -7,8 +7,11 @@ def parse_url(before_url):
 	privacy_tags = ["privacy"]	
 	
 	url = before_url
+	hdr = {'User-Agent': 'Mozilla/5.0'}
 	
-	page = urllib2.urlopen(url)
+	req = Request(url,headers=hdr)
+	page = urlopen(req)
+
 	soup = BeautifulSoup(page, features="html.parser")
 	
 	bad_urls = []
