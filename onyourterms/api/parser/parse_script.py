@@ -9,12 +9,18 @@ def parse_url(before_url):
 	url = before_url
 	hdr = {'User-Agent': 'Mozilla/5.0'}
 	
+	print("a")
+	
 	req = Request(url,headers=hdr)
 	page = urlopen(req)
-
+	
+	print("b")
+	
 	soup = BeautifulSoup(page, features="html.parser")
 	
 	bad_urls = []
+	
+	print("c")
 	
 	for line in soup.get_text().split("."):
 		for tag in bad_tags:
